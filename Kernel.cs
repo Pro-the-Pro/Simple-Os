@@ -8,11 +8,14 @@ namespace Simple_Os
     public class Kernel : Sys.Kernel
     {
         private CosmosVFS fs;
-
+        public static string bgColour;
+        public static string fgColour;
         protected override void BeforeRun()
         {
             Console.BackgroundColor = ConsoleColor.Blue;
+            bgColour = "blue";
             Console.ForegroundColor = ConsoleColor.White;
+            fgColour = "white";
             Console.WriteLine("Mounting File System");
             fs = new CosmosVFS();
             VFSManager.RegisterVFS(fs);
