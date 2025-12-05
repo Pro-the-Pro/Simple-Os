@@ -36,6 +36,7 @@ namespace Simple_Os
             Console.WriteLine("3. About");
             Console.WriteLine("4. Text Editor");
             Console.WriteLine("5. Calculator");
+            Console.WriteLine("6. Settings");
             Console.Write("Select an option: ");
 
             var optionKey = Console.ReadKey(true);
@@ -72,6 +73,12 @@ namespace Simple_Os
                     Console.Clear();
                     var calculator = new Apps.calculator();
                     calculator.Run();
+                    break;
+
+                case '6':
+                    Console.Clear();
+                    var settings = new Apps.settings();
+                    settings.Run();
                     break;
 
                 default:

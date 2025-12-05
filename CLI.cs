@@ -327,6 +327,11 @@ namespace Simple_Os
                             var calculator = new Apps.calculator();
                             calculator.Run();
                         }
+                        else if (programName == "settings" || programName == "set")
+                        {
+                            var settingsApp = new Apps.settings();
+                            settingsApp.Run();
+                        }
                         else
                         {
                             Console.WriteLine("Program not found.");
