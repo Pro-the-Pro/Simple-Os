@@ -69,8 +69,8 @@ namespace Simple_Os
 
                 case '4':
                     Console.Clear();
-                    var textEditor = new Apps.textEdit();
-                    textEditor.Run();
+                    var textEdit = new Apps.textEdit();
+                    textEdit.Run();
                     break;
                 case '5':
                     Console.Clear();

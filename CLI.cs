@@ -5,6 +5,7 @@ using Cosmos.System.FileSystem;
 using Cosmos.System.FileSystem.VFS;
 using Cosmos.System.FileSystem.Listing;
 using System.Reflection.Metadata.Ecma335;
+using Simple_Os.Apps;
 
 namespace Simple_Os
 {
@@ -343,15 +344,28 @@ namespace Simple_Os
                 {
                     Console.WriteLine(currentDir);
                 }
+
                 else if (input == "time")
                 {
                     Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
                 }
+
                 else if (input == "date")
                 {
                     Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd"));
                 }
 
+                else if (input == "te" || input == "textedit" || input == "textEdit")
+                {
+                    var textEdit = new Apps.textEdit();
+                    textEdit.Run();    
+                }
+
+                else if (input == "calc" || input == "calculator")
+                {
+                    var calculator = new Apps.calculator();
+                    calculator.Run();
+                }
 
                 else
                 {
